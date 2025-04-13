@@ -1,0 +1,126 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #fff0f5;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #e11d48;
+}
+
+img {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 32px;
+  position: relative;
+}
+
+.button {
+  font-weight: bold;
+  border-radius: 12px;
+  padding: 24px 48px;
+  font-size: 24px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+#noButton {
+  background-image: linear-gradient(to right, #f87171, #ef4444, #dc2626);
+}
+
+#noButton:hover {
+  transform: scale(1.05) rotate(-5deg);
+}
+
+#loveButton {
+  background-image: linear-gradient(to right, #ec4899, #db2777, #be185d);
+}
+
+#loveButton:hover {
+  transform: scale(1.05) rotate(5deg);
+  background-image: linear-gradient(to right, #ff0077, #ff5599);
+}
+
+.hidden {
+  display: none;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 26px;
+  text-align: center;
+  color: #be185d;
+}
+
+/* ลูกเล่น animation */
+.bounce {
+  animation: bounce 2s infinite;
+}
+
+.heart-beat {
+  animation: heartBeat 1.5s infinite;
+}
+
+.shake {
+  animation: shake 0.5s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes heartBeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+@media (max-width: 640px) {
+  .title {
+    font-size: 20px;
+  }
+  .button {
+    font-size: 20px;
+    padding: 20px 40px;
+  }
+}
